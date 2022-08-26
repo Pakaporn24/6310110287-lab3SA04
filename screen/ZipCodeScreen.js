@@ -1,6 +1,6 @@
 import React from "react";
  import { FlatList, TouchableHighlight } from "react-native";
- import { StatusBar, View, Text, StyleSheet } from "react-native";
+ import { StatusBar, View, Text, StyleSheet , ImageBackground } from "react-native";
  import { useNavigation } from "@react-navigation/native";
 
 
@@ -12,14 +12,19 @@ import React from "react";
      { place: 'Chonburi', code: '20000' },
     ]
 
- const ZipItem = ({place, code, navigation}) => (
+ const ZipItem = ({place, code, navigation}) => ( 
+  
      <TouchableHighlight onPress={() => {
          navigation.navigate("Weather", {zipCode: code})
-     }}>
+     }}>  
+     
+    
          <View style= {style.zipItem}>
-          <Text style= {style.zipPlace}>{place}</Text>
-          <Text style= {style.zipCode}>{code}</Text>
+          <Text style= {style.Place}>{place}</Text>
+          <Text style= {style.Code}>{code}</Text>
+         
          </View>
+          
      </TouchableHighlight>
 
  )
@@ -45,9 +50,24 @@ import React from "react";
        zipItem: {
          flex: 2,
          flexDirection: 'row',
-         justifyContent: 'space-between'
-        
+         justifyContent: 'space-evenly',
        },
-             
+       Place: {
+        flex: 2,
+        fontSize: 32,
+        fontWeight: "bold",
+        color: 'black',
+        textAlign: 'right'
+      },
+      Code: {
+        flex: 2,
+        textAlign: 'center',
+        fontSize: 28,
+        fontWeight: "bold",
+        color: 'black',
+      },
+      
+
     }
   ) 
+

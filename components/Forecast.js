@@ -30,10 +30,16 @@ import { View, Text , StyleSheet } from "react-native";
                      <Text style={style.Text}>   Humidity    {props.humidity} %  </Text>
                      <Text> </Text>
                      <Text style={style.Text}>   Feel Like    {props.feels_like} °C    </Text>
-                 </View>
-             </View>
-             <Text> </Text>
+                 </View> 
+             <View>
+                     <Text> </Text>
+                     <Text> </Text>
+                     <Text style={style.Text}>{props.description}</Text>
+            </View>
 
+             <Text> </Text>
+             </View>
+             <Text style={style.Text}>~~~~~~~~~~~~~~~~~~~~~~~~~~</Text>
 
           </View> 
       );

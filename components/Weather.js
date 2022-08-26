@@ -45,13 +45,13 @@ import React, { useEffect, useState } from "react";
         <ImageBackground source={require('../gg.jpg')} style={style.backdrop}>
                <View style={style.highlight}>
                  <Text style={style.titleText}>Zip code is {props.zipCode}.</Text>
+                 <Text> </Text>
                  <Forecast {...forecastInfo}/>
              </View>
          </ImageBackground>
 
      );
     }
-
     
  const style = StyleSheet.create(
   {
@@ -60,12 +60,14 @@ import React, { useEffect, useState } from "react";
            width: '100%',
            height: '100%'
           },
+
           highlight: {
              backgroundColor: 'rgba(0, 0, 0, 0.5)',
              width:"100%", 
-             height:"40%", 
+             height:"45%", 
              paddingTop: Constants.statusBarHeight, 
              alignItems: 'center'
+             
          },
 
          titleText: {
