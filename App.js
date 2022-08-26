@@ -13,7 +13,6 @@ import { StatusBar } from 'expo-status-bar';
     <Stack.Navigator>
     <Stack.Screen name="Home"component={ZipCodeScreen}
            options={{
-           title: 'Choose a zip code',
            headerStyle: {
             backgroundColor: 'blue',
            },

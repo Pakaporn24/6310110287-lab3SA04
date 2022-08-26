@@ -40,7 +40,8 @@ import { View, Text , StyleSheet } from "react-native";
              <Text> </Text>
              </View>
              <Text style={style.Text}>~~~~~~~~~~~~~~~~~~~~~~~~~~</Text>
-             
+             <Text> </Text>
+             <Text style={style.location}>{props.name}, {props.country} </Text>
 
           </View> 
       );
@@ -56,6 +57,14 @@ import { View, Text , StyleSheet } from "react-native";
             color: 'white',
 
         },
+        location: {
+            textAlign: 'right',
+            fontSize: 15,
+            fontWeight: "bold",
+            color: 'grey',
+
+        },
+
 
         temp: {
             fontSize: 40, 

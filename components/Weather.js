@@ -9,7 +9,8 @@ import React, { useEffect, useState } from "react";
   export default function Weather(props) {
          const [forecastInfo, setForecastInfo] = useState(
           {    
-                   
+            name: 'loading',
+            country: 'loading',
           main: 'loading..',
           description: 'loading',
           temp: 0,
@@ -28,6 +29,8 @@ import React, { useEffect, useState } from "react";
         .then((response) => response.json())
         .then((json) => {
           setForecastInfo({
+            name: json.name,
+            country: json.sys.country,
             main: json.weather[0].main,
             description: json.weather[0].description,
             humidity: json.main.humidity,
@@ -71,10 +74,10 @@ import React, { useEffect, useState } from "react";
          },
 
          titleText: {
-             fontSize: 25,
+             fontSize: 30,
              fontWeight: "bold",
-             color: 'white',
-             textAlign: 'center'
+             textAlign: 'center',
+             color: 'black'
          }
      }
  ) 
