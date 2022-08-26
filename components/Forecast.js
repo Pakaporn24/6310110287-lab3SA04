@@ -40,6 +40,7 @@ import { View, Text , StyleSheet } from "react-native";
              <Text> </Text>
              </View>
              <Text style={style.Text}>~~~~~~~~~~~~~~~~~~~~~~~~~~</Text>
+             
 
           </View> 
       );

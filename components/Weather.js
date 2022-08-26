@@ -8,7 +8,8 @@ import React, { useEffect, useState } from "react";
 
   export default function Weather(props) {
          const [forecastInfo, setForecastInfo] = useState(
-          {           
+          {    
+                   
           main: 'loading..',
           description: 'loading',
           temp: 0,
@@ -39,7 +40,6 @@ import React, { useEffect, useState } from "react";
         });
     }
   }, [props.zipCode]);
-
     return (
         
         <ImageBackground source={require('../gg.jpg')} style={style.backdrop}>
