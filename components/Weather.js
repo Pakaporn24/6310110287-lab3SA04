@@ -15,6 +15,7 @@ import Forecast from "./Forecast";
          <ImageBackground source={require('../gg.jpg')} style={style.backdrop}>
              <Text>Zip Code</Text>
              <Text>{props.zipCode}</Text>
+             
              <Forecast {...forecastInfo}/>
          </ImageBackground>
 

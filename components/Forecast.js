@@ -11,6 +11,7 @@ import { View, Text } from "react-native";
                  <Text>{props.temp}</Text>
                  <Text>°C</Text>
              </View>
+             
          </View> 
      );
  } 
