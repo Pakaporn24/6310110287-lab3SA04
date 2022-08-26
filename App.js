@@ -11,7 +11,18 @@ import { StatusBar } from 'expo-status-bar';
    return (
     <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name = "Home" component= {ZipCodeScreen} />
+    <Stack.Screen name="Home"component={ZipCodeScreen}
+           options={{
+           title: 'Choose a zip code',
+           headerStyle: {
+            backgroundColor: 'blue',
+           },
+           headerTintColor: '#fff',
+           headerTitleStyle: {
+             fontWeight: 'bold',
+           },
+         }}
+       />
       <Stack.Screen name = "Weather" component= {WeatherScreen} />
     </Stack.Navigator>
   </NavigationContainer>
